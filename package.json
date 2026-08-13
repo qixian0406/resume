@@ -1,0 +1,8 @@
+{
+  "name": "lin-li-resume",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check _worker.js && node --check content-runtime.js && node --check interactions.js && node --check admin/admin.js"
+  }
+}

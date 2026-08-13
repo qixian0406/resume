@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>简历编辑后台｜李林</title>
+  <link rel="icon" href="/favicon.svg">
+  <link rel="stylesheet" href="/admin/admin.css">
+  <script defer src="/admin/admin.js"></script>
+</head>
+<body>
+  <main class="login-shell" id="login-view" hidden>
+    <section class="login-card" aria-labelledby="login-title">
+      <a class="back-link" href="/">← 返回简历</a>
+      <p class="kicker">RESUME ADMIN</p>
+      <h1 id="login-title">编辑后台</h1>
+      <p class="login-copy">登录后可直接点击预览中的文字修改，保存后立即发布到公开简历。</p>
+      <form id="login-form">
+        <label for="password">管理员密码</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required autofocus>
+        <button type="submit">登录</button>
+        <p class="form-message" id="login-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <main class="editor-shell" id="editor-view" hidden>
+    <header class="editor-bar">
+      <div>
+        <p class="kicker">LIN LI · RESUME CMS</p>
+        <strong>可视化编辑</strong>
+        <span class="save-status" id="save-status">内容已同步</span>
+      </div>
+      <div class="editor-actions">
+        <a href="/" target="_blank" rel="noopener">打开公开页</a>
+        <button class="secondary" id="reload-button" type="button">放弃修改</button>
+        <button id="save-button" type="button">保存并发布</button>
+        <button class="quiet" id="logout-button" type="button">退出</button>
+      </div>
+    </header>
+    <aside class="editing-help">
+      <strong>使用方法</strong>
+      <span>点击下方绿色虚线框中的文字直接编辑；链接地址可在选中后单独修改。</span>
+      <label id="link-editor" hidden>链接地址 <input id="href-input" type="text"></label>
+    </aside>
+    <div class="preview-wrap">
+      <iframe id="preview" title="简历实时编辑预览" src="/?cms-preview=1"></iframe>
+    </div>
+  </main>
+</body>
+</html>
